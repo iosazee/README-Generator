@@ -2,16 +2,16 @@
 const displayLicenseBadge = (license) => {
     let badge = ""
     if (license === 'Apache') {
-        badge = `[${license}](https://img.shields.io/badge/License-Apache_2.0-blue.svg)`
+        badge = `![${license}](https://img.shields.io/badge/License-Apache_2.0-blue.svg)`
     }
     else if (license === 'Boost') {
-        badge = `[${license}](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)`
+        badge = `![${license}](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)`
     }
     else if (license === 'CCO'){
-        badge = `[${license}](https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg)`
+        badge = `![${license}](https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg)`
     }
     else if (license === 'MIT'){
-        badge = `[${license}](https://img.shields.io/badge/License-MIT-yellow.svg)`
+        badge = `![${license}](https://img.shields.io/badge/License-MIT-yellow.svg)`
     }
     else {
         badge = ""
@@ -24,16 +24,17 @@ const displayLicenseBadge = (license) => {
 const getLicenseLink = (license) => {
     let link = ""
    if (license === 'Apache'){
-    link = `[${license}](https://opensource.org/licenses/Apache-2.0)`
+
+    link = `https://opensource.org/licenses/Apache-2.0`
    }
    else if (license === 'Boost'){
-    link = `[${license}](https://www.boost.org/LICENSE_1_0.txt)`
+    link = `https://www.boost.org/LICENSE_1_0.txt`
    }
    else if (license === 'CCO') {
-    link = `[${license}](http://creativecommons.org/publicdomain/zero/1.0/)`
+    link = `http://creativecommons.org/publicdomain/zero/1.0/`
    }
    else if (license === 'MIT') {
-    link = `[${license}](https://opensource.org/licenses/MIT)`
+    link = `https://opensource.org/licenses/MIT`
    }
    else {
     link = ''
@@ -49,7 +50,7 @@ const renderLicense = (license) => {
         licenseSection = ""
     } else {
         licenseSection = `## License
-    This project is licensed under the ${license} license.`
+This project is licensed under the ${license} license.`
 
     }
 
@@ -60,7 +61,7 @@ const renderLicense = (license) => {
 const generateMarkDown = (data) => {
 
     return `# ${data.title}
-    ${displayLicenseBadge(data.license)}
+${displayLicenseBadge(data.license)}
 
 ## Description
 
@@ -90,7 +91,7 @@ ${data.description}
 
 ${data.usage}
 
-${renderLicense(data.license)}
+${renderLicense(data.license)} ${getLicenseLink(data.license)}
 
 ## Contributing
 
@@ -106,7 +107,7 @@ ${data.test}
 
 If you have any questions you can contact me at ${data.email}.
 
-You can see more of my work at [${data.username}](https://github.com/${data.username}).`;
+You can see more of my work at [My github's Profile](https://github.com/${data.username}).`;
 
 }
 
