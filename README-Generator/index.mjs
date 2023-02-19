@@ -8,37 +8,37 @@ const questions = [
     {
         type: 'input',
         name: 'username',
-        message: 'What is your github profile name?'
+        message: 'What is your github profile name?\n'
     },
 
     {
         type: 'input',
         name: 'email',
-        message: 'What is your email address?'
+        message: 'What is your email address?\n'
     },
 
     {
         type: 'input',
         name: 'title',
-        message: "What's the title of your project?",
+        message: "What's the title of your project?\n",
     },
 
     {
         type: 'input',
         name: 'description',
-        message: "Enter a detailed description for your project:",
+        message: "Enter a detailed description for your project:\n",
     },
 
     {
         type: 'input',
         name: 'installation',
-        message: "Briefly describe how your project can be installed:",
+        message: "Briefly describe how your project can be installed:\n",
     },
 
     {
         type: 'input',
         name: 'usage',
-        message: "Briefly describe the use cases for your project:",
+        message: "Briefly describe the usage of your app:\n",
     },
 
     {
@@ -51,14 +51,14 @@ const questions = [
     {
         type: 'input',
         name: 'contributing',
-        message: "What guidelines should developers be aware of before contributing to your project?",
+        message: "What guidelines should developers be aware of before contributing to your project?\n",
         default: "N/A"
     },
 
     {
         type: 'input',
         name: 'test',
-        message: "What command should be used to run tests for your project, if applicable",
+        message: "What command should be used to run tests for your project, if applicable\n",
         default: 'N/A',
     },
 
