@@ -105,7 +105,7 @@ ${data.test}
 
 ## Questions
 
-If you have any questions you can contact me at ${data.email}.
+If you have any questions you can contact me at [this email]](${data.email}).
 
 You can see more of my work at [my github's profile](https://github.com/${data.username}).
 
